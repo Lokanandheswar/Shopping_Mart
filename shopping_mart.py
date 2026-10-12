@@ -1,8 +1,10 @@
+# lists Creation
 product_list = []
 user_list = []
 cart_list = []
 order_list = []
 
+# Roles
 while True:
     print("Welcome to your shopping mart")
     print("1.Admin")
@@ -23,7 +25,7 @@ while True:
             print("6.Exit")
 
             admin_choice = int(input("Enter your choice: "))
-
+# Add Products
             if admin_choice == 1:
                 product_id = input("Enter Product ID: ")
                 product_name = input("Enter the Product Name: ")
@@ -31,7 +33,8 @@ while True:
 
                 product = [product_id, product_name, product_price]
                 product_list.append(product)
-
+                print("Product Added Successfully")
+# Update Products
             elif admin_choice == 2:
                 product_id = input("Enter product ID to update: ")
                 for product in product_list:
@@ -46,7 +49,7 @@ while True:
                         break
                 else:
                     print("Product not found")
-
+# Remove Product
             elif admin_choice == 3:
                 product_id = input("Enter the Product ID to remove: ")
                 for product in product_list:
@@ -56,7 +59,7 @@ while True:
                         break
                 else:
                     print("Product not found")
-
+# View Product
             elif admin_choice == 4:
                 if len(product_list) == 0:
                     print("No products available")
@@ -67,7 +70,7 @@ while True:
                         print("Product Name:", product[1])
                         print("Product Price:", product[2])
                         print("-" * 30)
-
+# view Users
             elif admin_choice == 5:
                 if len(user_list) == 0:
                     print("No users found")
@@ -78,11 +81,11 @@ while True:
                         print("User Name:", user[1])
                         print("User Email:", user[2])
                         print("-" * 30)
-
+# Exit from the admin
             elif admin_choice == 6:
                 print("Exiting Admin")
                 break
-
+# Invalid choice
             else:
                 print("Invalid Choice. Please Try again.")
 
