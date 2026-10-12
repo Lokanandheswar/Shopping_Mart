@@ -6,7 +6,7 @@ order_list = []
 
 # Roles
 while True:
-    print("Welcome to your shopping mart")
+    print("Welcome to our shopping mart")
     print("1.Admin")
     print("2.User")
     print("3.Exit")
